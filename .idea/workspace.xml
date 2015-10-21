@@ -1,7 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80266b32-a35d-49c9-94e3-093dcc0fe96f" name="Default" comment="" />
+    <list default="true" id="80266b32-a35d-49c9-94e3-093dcc0fe96f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils.py" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x2layer_cnn\cnn_lasg_results.mat" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x2layer_cnn\weigths_lasg0.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x2layer_cnn\weigths_lasg1.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x2layer_cnn\weigths_lasg10.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x2layer_cnn\weigths_lasg11.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x2layer_cnn\weigths_lasg12.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x2layer_cnn\weigths_lasg2.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x2layer_cnn\weigths_lasg3.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x2layer_cnn\weigths_lasg4.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x2layer_cnn\weigths_lasg5.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x2layer_cnn\weigths_lasg6.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x2layer_cnn\weigths_lasg7.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x2layer_cnn\weigths_lasg8.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x2layer_cnn\weigths_lasg9.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x3layer_cnn\cnn_lasg_results.mat" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x3layer_cnn\weigths_lasg0.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x3layer_cnn\weigths_lasg1.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x3layer_cnn\weigths_lasg10.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x3layer_cnn\weigths_lasg11.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x3layer_cnn\weigths_lasg12.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x3layer_cnn\weigths_lasg2.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x3layer_cnn\weigths_lasg3.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x3layer_cnn\weigths_lasg4.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x3layer_cnn\weigths_lasg5.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x3layer_cnn\weigths_lasg6.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x3layer_cnn\weigths_lasg7.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x3layer_cnn\weigths_lasg8.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x3layer_cnn\weigths_lasg9.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x4layer_cnn\cnn_lasg_results.mat" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x4layer_cnn\weigths_lasg0.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x4layer_cnn\weigths_lasg1.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x4layer_cnn\weigths_lasg10.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x4layer_cnn\weigths_lasg11.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x4layer_cnn\weigths_lasg12.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x4layer_cnn\weigths_lasg2.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x4layer_cnn\weigths_lasg3.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x4layer_cnn\weigths_lasg4.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x4layer_cnn\weigths_lasg5.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x4layer_cnn\weigths_lasg6.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x4layer_cnn\weigths_lasg7.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x4layer_cnn\weigths_lasg8.npz" afterPath="" />
+      <change type="DELETED" beforePath="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN\Results\CNN\Lasagne\2x4layer_cnn\weigths_lasg9.npz" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cnn_lasg_results.mat" afterPath="$PROJECT_DIR$/cnn_lasg_results.mat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eeg_cnn_3.py" afterPath="$PROJECT_DIR$/eeg_cnn_3.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eeg_cnn_lasg.py" afterPath="$PROJECT_DIR$/eeg_cnn_lasg.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/preprocess_samples.py" afterPath="$PROJECT_DIR$/preprocess_samples.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="EEG_CNN.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,82 +73,24 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="mnist.py" pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/Anaconda/Lib/site-packages/Lasagne/examples/mnist.py">
+          <file leaf-file-name="preprocess_samples.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/preprocess_samples.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="358" column="0" selection-start-line="358" selection-start-column="0" selection-end-line="358" selection-end-column="0" />
+                  <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
                   <folding>
-                    <element signature="e#536#573#0" expanded="true" />
+                    <element signature="e#0#18#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="vgg16.py" pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/Documents/GitHub/Recipes/modelzoo/vgg16.py">
+          <file leaf-file-name="utils.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/utils.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-                  <folding>
-                    <element signature="e#332#400#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="eeg_cnn_3.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/eeg_cnn_3.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="146" column="23" selection-start-line="146" selection-start-column="23" selection-end-line="146" selection-end-column="23" />
-                  <folding>
-                    <element signature="e#127#165#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="eeg_svm.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/eeg_svm.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.7669173">
-                  <caret line="252" column="25" selection-start-line="252" selection-start-column="25" selection-end-line="252" selection-end-column="25" />
+                <state vertical-scroll-proportion="0.48675495">
+                  <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
                   <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="cifar10_nin.py" pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/Documents/GitHub/Recipes/modelzoo/cifar10_nin.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="eeg_cnn_convpool.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/eeg_cnn_convpool.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="83" column="29" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
-                  <folding>
-                    <element signature="e#440#477#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="plot_filters.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/plot_filters.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-                  <folding>
-                    <marker date="1445278093000" expanded="true" signature="288:312" placeholder="..." />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -107,12 +99,14 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="eeg_svm.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/eeg_svm.py">
+          <file leaf-file-name="eeg_cnn_lasg.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/eeg_cnn_lasg.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.56954885">
-                  <caret line="203" column="29" selection-start-line="203" selection-start-column="29" selection-end-line="203" selection-end-column="29" />
-                  <folding />
+                <state vertical-scroll-proportion="0.68046355">
+                  <caret line="159" column="10" selection-start-line="159" selection-start-column="10" selection-end-line="159" selection-end-column="10" />
+                  <folding>
+                    <element signature="e#374#411#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -128,6 +122,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -135,14 +132,15 @@
         <option value="Y:/Pouya/From IBM/Codes/EEG/adaptiveEEG/xvalid_LSO2.py" />
         <option value="$PROJECT_DIR$/eeg_cnn.py" />
         <option value="$PROJECT_DIR$/eeg_cnn_1.py" />
-        <option value="$PROJECT_DIR$/preprocess_samples.py" />
         <option value="$PROJECT_DIR$/eeg_cnn_2.py" />
         <option value="$PROJECT_DIR$/elec_loc_mapping.py" />
         <option value="$PROJECT_DIR$/../../../foobar/minglish_dic.py" />
         <option value="$PROJECT_DIR$/eeg_svm.py" />
-        <option value="$PROJECT_DIR$/eeg_cnn_3.py" />
         <option value="$PROJECT_DIR$/eeg_cnn_convpool.py" />
         <option value="$PROJECT_DIR$/plot_filters.py" />
+        <option value="$PROJECT_DIR$/eeg_cnn_3.py" />
+        <option value="$PROJECT_DIR$/utils.py" />
+        <option value="$PROJECT_DIR$/preprocess_samples.py" />
         <option value="$PROJECT_DIR$/eeg_cnn_lasg.py" />
       </list>
     </option>
@@ -156,7 +154,7 @@
     <option name="width" value="1938" />
     <option name="height" value="1050" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -219,7 +217,7 @@
       <recent name="Z:\CVPIA\Pouya\SDrive\SkyDrive\Documents\Proposal\Programs\EEG_CNN" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.plot_filters">
+  <component name="RunManager" selected="Python.eeg_cnn_lasg">
     <configuration default="false" name="eeg_cnn_3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -233,23 +231,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="EEG_CNN" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/eeg_cnn_3.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="elec_loc_mapping" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="EEG_CNN" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/elec_loc_mapping.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -301,6 +282,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="EEG_CNN" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot_filters.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="utils" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="EEG_CNN" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -483,18 +481,18 @@
       <item index="1" class="java.lang.String" itemvalue="Python.eeg_svm" />
       <item index="2" class="java.lang.String" itemvalue="Python.mnist" />
       <item index="3" class="java.lang.String" itemvalue="Python.eeg_cnn_3" />
-      <item index="4" class="java.lang.String" itemvalue="Python.elec_loc_mapping" />
-      <item index="5" class="java.lang.String" itemvalue="Python.minglish_dic" />
-      <item index="6" class="java.lang.String" itemvalue="Python.eeg_cnn_lasg" />
-      <item index="7" class="java.lang.String" itemvalue="Python.plot_filters" />
+      <item index="4" class="java.lang.String" itemvalue="Python.minglish_dic" />
+      <item index="5" class="java.lang.String" itemvalue="Python.eeg_cnn_lasg" />
+      <item index="6" class="java.lang.String" itemvalue="Python.plot_filters" />
+      <item index="7" class="java.lang.String" itemvalue="Python.utils" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.plot_filters" />
-        <item index="1" class="java.lang.String" itemvalue="Python.eeg_cnn_lasg" />
-        <item index="2" class="java.lang.String" itemvalue="Python.eeg_cnn_3" />
-        <item index="3" class="java.lang.String" itemvalue="Python.minglish_dic" />
-        <item index="4" class="java.lang.String" itemvalue="Python.elec_loc_mapping" />
+        <item index="0" class="java.lang.String" itemvalue="Python.eeg_cnn_lasg" />
+        <item index="1" class="java.lang.String" itemvalue="Python.utils" />
+        <item index="2" class="java.lang.String" itemvalue="Python.plot_filters" />
+        <item index="3" class="java.lang.String" itemvalue="Python.eeg_cnn_3" />
+        <item index="4" class="java.lang.String" itemvalue="Python.minglish_dic" />
       </list>
     </recent_temporary>
   </component>
@@ -528,20 +526,20 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3736142" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16833773" sideWeight="0.49380532" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3736142" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3736142" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16833773" sideWeight="0.49380532" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33813748" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16622691" sideWeight="0.5066007" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29379156" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3736142" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29379156" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -589,13 +587,18 @@
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$USER_HOME$/Documents/GitHub/Recipes/modelzoo/vgg16.py</url>
+          <url>file://$PROJECT_DIR$/../../../../../GitHub/Recipes/modelzoo/vgg16.py</url>
           <line>8</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/eeg_cnn_lasg.py</url>
           <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/preprocess_samples.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="63" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -605,31 +608,18 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="60" />
+      <option name="time" value="67" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="data.shape" language="Python" />
+        <watch expression="data_aug.shape" language="Python" />
+        <watch expression="subjNumbers.shape" language="Python" />
+        <watch expression="labels.shape" language="Python" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/eeg_cnn_convpool.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="83" column="29" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
-          <folding>
-            <element signature="e#440#477#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plot_filters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding>
-            <marker date="1445278093000" expanded="true" signature="288:312" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Anaconda/Lib/site-packages/Lasagne/lasagne/layers/input.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -837,20 +827,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elec_loc_mapping.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.037593983">
-          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/preprocess_samples.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.9398496">
-          <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Anaconda/Lib/site-packages/Lasagne/lasagne/layers/dnn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -858,25 +834,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda/Lib/site-packages/Lasagne/lasagne/nonlinearities.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33270678">
-          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Anaconda/Lib/site-packages/Lasagne/lasagne/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.2593985">
           <caret line="139" column="4" selection-start-line="139" selection-start-column="4" selection-end-line="139" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda/Lib/site-packages/Lasagne/lasagne/layers/conv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56954885">
-          <caret line="387" column="62" selection-start-line="387" selection-start-column="62" selection-end-line="387" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -898,6 +859,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.3590225">
           <caret line="115" column="36" selection-start-line="115" selection-start-column="26" selection-end-line="115" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -905,16 +867,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.56954885">
           <caret line="158" column="38" selection-start-line="158" selection-start-column="38" selection-end-line="158" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eeg_cnn_3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="146" column="23" selection-start-line="146" selection-start-column="23" selection-end-line="146" selection-end-column="23" />
-          <folding>
-            <element signature="e#127#165#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -922,9 +875,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="358" column="0" selection-start-line="358" selection-start-column="0" selection-end-line="358" selection-end-column="0" />
-          <folding>
-            <element signature="e#536#573#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -932,9 +882,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-          <folding>
-            <element signature="e#332#400#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -942,7 +889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -950,9 +896,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="83" column="29" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
-          <folding>
-            <element signature="e#440#477#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -960,9 +903,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.9117646">
           <caret line="342" column="44" selection-start-line="342" selection-start-column="44" selection-end-line="342" selection-end-column="44" />
-          <folding>
-            <element signature="e#1532#1541#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -970,7 +910,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6052632">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -987,33 +926,92 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
           <folding>
-            <marker date="1445278093000" expanded="true" signature="288:312" placeholder="..." />
+            <marker date="1445278093000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../IBM/Codes/Sergey_code/polyssifier_pb_09_21_15.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35526314">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.034768213">
+          <caret line="97" column="22" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eeg_svm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="246" column="0" selection-start-line="246" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda/Lib/site-packages/Lasagne/lasagne/nonlinearities.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45112783">
+          <caret line="142" column="4" selection-start-line="142" selection-start-column="4" selection-end-line="142" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda/Lib/site-packages/Lasagne/lasagne/layers/conv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45983934">
+          <caret line="389" column="7" selection-start-line="389" selection-start-column="7" selection-end-line="389" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda/Lib/site-packages/Lasagne/lasagne/init.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45112783">
+          <caret line="196" column="0" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eeg_cnn_3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+          <folding>
+            <element signature="e#127#165#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elec_loc_mapping.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4605263">
+          <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preprocess_samples.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/eeg_cnn_lasg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7086466">
-          <caret line="267" column="92" selection-start-line="267" selection-start-column="92" selection-end-line="267" selection-end-column="92" />
+        <state vertical-scroll-proportion="0.68046355">
+          <caret line="159" column="10" selection-start-line="159" selection-start-column="10" selection-end-line="159" selection-end-column="10" />
           <folding>
             <element signature="e#374#411#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/eeg_svm.py">
+    <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56954885">
-          <caret line="203" column="29" selection-start-line="203" selection-start-column="29" selection-end-line="203" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.48675495">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
           <folding />
         </state>
       </provider>

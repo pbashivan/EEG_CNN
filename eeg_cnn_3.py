@@ -7,7 +7,6 @@ import numpy as np
 import scipy.io
 np.random.seed(123)
 
-from keras.datasets import cifar10
 from keras.preprocessing.image import ImageDataGenerator
 from keras.models import Sequential
 from keras.layers.core import Dense, Dropout, Activation, Flatten
@@ -15,9 +14,7 @@ from keras.layers.convolutional import Convolution2D, MaxPooling2D
 from keras.optimizers import SGD, Adadelta, Adagrad
 from keras.utils import np_utils, generic_utils
 from keras.layers.normalization import BatchNormalization
-from six.moves import range
-
-from sklearn.cross_validation import StratifiedKFold, KFold
+# from six.moves import range
 
 
 '''
@@ -52,46 +49,6 @@ nb_conv = [3, 3]
 # the CIFAR10 images are RGB
 image_dimensions = 3
 
-def load_data(data_file):
-    """
-    Loads the data from multiple sources if provided.
-
-    Parameters
-    ----------
-    source_dir: str
-
-    Returns
-    -------
-    data: array_like
-    """
-    print("Loading data from %s" % (data_file))
-
-    dataMat = scipy.io.loadmat(data_file, mat_dtype=True)
-    data = dataMat['featMat']
-    labels = dataMat['labels']
-    # indices = np.random.permutation(labels.shape[1])      # shuffling indices
-
-    print("Data loading complete. Shape is %r" % (dataMat['featMat'].shape,))
-    # return data[indices, :, :, :].astype(np.uint8), labels[:, indices].T - 1        # Shuffled indices
-    return dataMat['featMat'].astype(np.uint8), dataMat['labels'].T - 1   # Sequential indices
-
-
-def reformatInput(data, labels, indices):
-    """
-    Receives the the indices for train and test datasets.
-    Outputs the train, validation, and test data and label datasets.
-    """
-
-    trainIndices = indices[0]
-    validIndices = indices[1][:np.floor(0.5 * indices[1].shape[0]).astype('int32')]
-    testIndices = indices[1][np.floor(0.5 * indices[1].shape[0]).astype('int32'):]
-    # Shuffling training data
-    # shuffledIndices = np.random.permutation(len(trainIndices))
-    # trainIndices = trainIndices[shuffledIndices]
-
-    return [(data[trainIndices, :, :, :], np.squeeze(labels[trainIndices]).astype(np.int32)),
-            (data[validIndices, :, :, :], np.squeeze(labels[validIndices]).astype(np.int32)),
-            (data[testIndices, :, :, :], np.squeeze(labels[testIndices]).astype(np.int32))]
 
 def main():
     # the data, shuffled and split between tran and test sets

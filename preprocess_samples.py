@@ -3,6 +3,12 @@ import matplotlib.pyplot as pl
 import scipy.io
 from scipy.interpolate import griddata
 from scipy.misc import bytescale
+from utils import augment_EEG
+
+augment = True      # Augment data
+pca = False
+stdMult = 0.1
+n_components = 2
 
 # Load electrode locations projected on a 2D surface
 mat = scipy.io.loadmat('Neuroscan_locs_polar_proj.mat')
@@ -21,6 +27,17 @@ data = mat['features']
 thetaFeats = data[:, :64]
 alphaFeats = data[:, 64:128]
 betaFeats = data[:, 128:192]
+
+if augment:
+    if pca:
+        thetaFeats = augment_EEG(thetaFeats, stdMult, pca=True, n_components=n_components)
+        alphaFeats = augment_EEG(alphaFeats, stdMult, pca=True, n_components=n_components)
+        betaFeats = augment_EEG(betaFeats, stdMult, pca=True, n_components=n_components)
+    else:
+        thetaFeats = augment_EEG(thetaFeats, stdMult, pca=False, n_components=n_components)
+        alphaFeats = augment_EEG(alphaFeats, stdMult, pca=False, n_components=n_components)
+        betaFeats = augment_EEG(betaFeats, stdMult, pca=False, n_components=n_components)
+
 labels = data[:, -1]
 nSamples = data.shape[0]
 nGridPoints = 40
@@ -59,8 +76,8 @@ featureMatrix[2, :, :, :] = betaInterp
 featureMatrix = np.swapaxes(featureMatrix, 0, 1)        # swap axes to have [samples, colors, W, H]
 
 # Save all data into mat file
-# scipy.io.savemat('EEG_images', {'featMat': featureMatrix,
-#                                 'labels': labels})
+scipy.io.savemat('EEG_images_aug', {'featMat': featureMatrix,
+                                'labels': labels})
 
 
 

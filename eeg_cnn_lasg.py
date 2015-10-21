@@ -29,9 +29,11 @@ from lasagne.layers import DropoutLayer
 from lasagne.layers import Pool2DLayer as PoolLayer
 from lasagne.nonlinearities import softmax
 
-from eeg_cnn_3 import load_data, reformatInput
+from utils import load_data, reformatInput
 
+augment = True      # Augment data
 filename = 'EEG_images'
+filename_aug = 'EEG_images_aug'
 subjectsFilename = 'trials_subNums'
 model = 'cnn'
 num_epochs = 300
@@ -58,20 +60,25 @@ def build_cnn(input_var=None):
     # Convolutional layer with 32 kernels of size 5x5. Strided and padded
     # convolutions are supported as well; see the docstring.
     network = lasagne.layers.Conv2DLayer(
-            network, num_filters=40, filter_size=(3, 3),
+            network, num_filters=64, filter_size=(3, 3),
             W=lasagne.init.GlorotUniform())
     network = lasagne.layers.Conv2DLayer(
-            network, num_filters=40, filter_size=(3, 3),
+            network, num_filters=64, filter_size=(3, 3),
             W=lasagne.init.GlorotUniform())
+    # network = lasagne.layers.Conv2DLayer(
+    #         network, num_filters=40, filter_size=(3, 3),
+    #         W=lasagne.init.GlorotUniform())
     network = lasagne.layers.MaxPool2DLayer(network, pool_size=(2, 2))
     # Expert note: Lasagne provides alternative convolutional layers that
     # override Theano's choice of which implementation to use; for details
     # please see http://lasagne.readthedocs.org/en/latest/user/tutorial.html.
 
     network = lasagne.layers.Conv2DLayer(
-            network, num_filters=80, filter_size=(3, 3))
+            network, num_filters=128, filter_size=(3, 3))
     network = lasagne.layers.Conv2DLayer(
-            network, num_filters=80, filter_size=(3, 3))
+            network, num_filters=128, filter_size=(3, 3))
+    # network = lasagne.layers.Conv2DLayer(
+    #         network, num_filters=80, filter_size=(3, 3))
     network = lasagne.layers.MaxPool2DLayer(network, pool_size=(2, 2))
 
     # A fully-connected layer of 256 units with 50% dropout on its inputs:
@@ -139,6 +146,12 @@ def main():
     mat = scipy.io.loadmat(subjectsFilename, mat_dtype=True)
     subjNumbers = np.squeeze(mat['subjectNum'])     # subject IDs for each trial
 
+    if augment:
+        data_aug, labels_aug = load_data(filename_aug)
+        data = np.vstack((data, data_aug))
+        labels = np.vstack((labels, labels_aug))
+        subjNumbers = np.concatenate((subjNumbers, subjNumbers))
+
     # Leave-Subject-Out cross validation
     fold_pairs = []
     for i in np.unique(subjNumbers):
@@ -160,8 +173,8 @@ def main():
         # X_val = (X_val - np.mean(X_val, axis=0)) / np.std(X_val.flatten(), axis=0)
         # X_test = (X_test - np.mean(X_test, axis=0)) / np.std(X_test.flatten(), axis=0)
         # X_train = (X_train - np.mean(X_train, axis=0)) / np.float32(256)
-        # X_val = (X_val - np.mean(X_val, axis=0)) / np.float32(256)
-        # X_test = (X_test - np.mean(X_test, axis=0)) / np.float32(256)
+        # X_val = (X_val - np.mean(X_train, axis=0)) / np.float32(256)
+        # X_test = (X_test - np.mean(X_train, axis=0)) / np.float32(256)
         X_train = X_train / np.float32(256)
         X_val = X_val / np.float32(256)
         X_test = X_test / np.float32(256)
