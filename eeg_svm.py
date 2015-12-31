@@ -4,7 +4,7 @@ tree, random forest, logistic regression, naive bayes, and LDA.
 """
 
 __author__ = "Pouya Bashivan, Sergey Plis"
-__copyright__ = "Copyright 2015, Mind Research Network"
+__copyright__ = ""
 __credits__ = ["Pouya Bashivan, Sergey Plis, Devon Hjelm, Alvaro Ulloa"]
 __licence__ = "3-clause BSD"
 __email__ = "pbshivan@memphis.edu"
@@ -57,14 +57,14 @@ logger = logging.getLogger(__name__)
 
 # please set this number to no more than the number of cores on the machine you're
 # going to be running it on but high enough to help the computation
-PROCESSORS = 4
+PROCESSORS = 12
 seed = rndc.SystemRandom().seed()
 #NAMES = ["Nearest Neighbors", "Linear SVM", "RBF SVM",  "Decision Tree",
 #         "Random Forest", "Logistic Regression", "Naive Bayes", "LDA"]
-NAMES = ["RBF SVM"]
+NAMES = ["RBF SVM", "Logistic Regression", "Random Forest"]
 
 
-def make_classifiers(data_shape) :
+def make_classifiers(data_shape):
     """Function that makes classifiers each with a number of folds.
 
     Returns two dictionaries for the classifiers and their parameters, using
@@ -97,7 +97,7 @@ def make_classifiers(data_shape) :
                                                 n_estimators=10,
                                                 max_features="auto",
                                                 n_jobs=PROCESSORS),
-        "Logistic Regression": LogisticRegression(),
+        "Logistic Regression": LogisticRegression(penalty='l1'),
         "Naive Bayes": GaussianNB(),
         "LDA": LDA()
         }
@@ -112,8 +112,8 @@ def make_classifiers(data_shape) :
         #        "gamma": 2,
         #        "C": 50}],
         "Decision Tree": [],
-        "Random Forest": [{"n_estimators": range(5,20)}],
-        "Logistic Regression": [{"C": np.logspace(0.1, 3, 7).tolist()}],
+        "Random Forest": [{"n_estimators": [5, 10, 20, 50, 100, 500, 1000]}],
+        "Logistic Regression": [{"C": np.logspace(-2, 3, 6).tolist()}],
         "Naive Bayes": [],
         "LDA": [{"n_components": [np.int(0.1 * data_shape[0]),
                                   np.int(0.2 * data_shape[0]),
@@ -297,7 +297,7 @@ def main(filename, subjectsFilename, out_dir):
     mat = scipy.io.loadmat(subjectsFilename, mat_dtype=True)
     subjNumbers = np.squeeze(mat['subjectNum'])     # subject IDs for each trial
     # scale data
-    data = scale(data, with_std=False)
+    data = scale(data)
 
     # Get classifiers and params.
     classifiers, params = make_classifiers(data.shape)
@@ -349,7 +349,7 @@ def main(filename, subjectsFilename, out_dir):
                              'accuScores' : accuScores})
     print 'Average accuracy: {0}'.format(np.mean(accuScores))
     print 'Average fscore: {0}'.format(np.mean(dscore))
-    print 'Sum support vecs: {0}'.format(np.sum(clf.best_estimator_.n_support_))
+    # print 'Sum support vecs: {0}'.format(np.sum(clf.best_estimator_.n_support_))
     # pl.figure(figsize=[10,6])
     # ax=pl.gca()
     # ds = pd.DataFrame(dscore.T, columns=NAMES)

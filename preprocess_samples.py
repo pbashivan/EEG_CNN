@@ -3,12 +3,15 @@ import matplotlib.pyplot as pl
 import scipy.io
 from scipy.interpolate import griddata
 from scipy.misc import bytescale
+from sklearn.preprocessing import scale
 from utils import augment_EEG
 
-augment = True      # Augment data
+augment = False      # Augment data
 pca = False
 stdMult = 0.1
 n_components = 2
+nGridPoints = 32
+nColors = 3                     # Number of color channels in the output image
 
 # Load electrode locations projected on a 2D surface
 mat = scipy.io.loadmat('Neuroscan_locs_polar_proj.mat')
@@ -40,8 +43,6 @@ if augment:
 
 labels = data[:, -1]
 nSamples = data.shape[0]
-nGridPoints = 40
-nColors = 3                     # Number of color channels in the output image
 
 # Interpolate the values
 grid_x, grid_y = np.mgrid[
@@ -62,11 +63,14 @@ for i in xrange(nSamples):
     print 'Interpolating {0}/{1}\r'.format(i+1, nSamples),
 
 # Byte scale to 0-255 range and substituting NaN with 0
-thetaInterp[~np.isnan(thetaInterp)] = bytescale(thetaInterp[~np.isnan(thetaInterp)])
+# thetaInterp[~np.isnan(thetaInterp)] = bytescale(thetaInterp[~np.isnan(thetaInterp)])
+thetaInterp[~np.isnan(thetaInterp)] = scale(thetaInterp[~np.isnan(thetaInterp)])
 thetaInterp = np.nan_to_num(thetaInterp)
-alphaInterp[~np.isnan(alphaInterp)] = bytescale(alphaInterp[~np.isnan(alphaInterp)])
+# alphaInterp[~np.isnan(alphaInterp)] = bytescale(alphaInterp[~np.isnan(alphaInterp)])
+alphaInterp[~np.isnan(alphaInterp)] = scale(alphaInterp[~np.isnan(alphaInterp)])
 alphaInterp = np.nan_to_num(alphaInterp)
-betaInterp[~np.isnan(betaInterp)] = bytescale(betaInterp[~np.isnan(betaInterp)])
+# betaInterp[~np.isnan(betaInterp)] = bytescale(betaInterp[~np.isnan(betaInterp)])
+betaInterp[~np.isnan(betaInterp)] = scale(betaInterp[~np.isnan(betaInterp)])
 betaInterp = np.nan_to_num(betaInterp)
 
 featureMatrix = np.zeros((nColors, nSamples, nGridPoints, nGridPoints))
@@ -76,22 +80,22 @@ featureMatrix[2, :, :, :] = betaInterp
 featureMatrix = np.swapaxes(featureMatrix, 0, 1)        # swap axes to have [samples, colors, W, H]
 
 # Save all data into mat file
-scipy.io.savemat('EEG_images_aug', {'featMat': featureMatrix,
+scipy.io.savemat('EEG_images_32_noMeanCorrection', {'featMat': featureMatrix,
                                 'labels': labels})
 
 
 
-ind = 75
+ind = 12
 pl.figure()
-pl.subplot(321)
+# pl.subplot(321)
 # negate the Y-Axis to make the image upside down
-pl.scatter(locs[:, 0], -locs[:,1], s=100, c=thetaFeats[ind, :].T); pl.title('Theta Electrodes')
-pl.subplot(322)
-pl.imshow(featureMatrix[ind, 0, :, :].T); pl.title('Theta')
-pl.subplot(323)
-pl.imshow(featureMatrix[ind, 1, :, :].T); pl.title('Alpha')
-pl.subplot(324)
-pl.imshow(featureMatrix[ind, 2, :, :].T); pl.title('Beta')
-pl.subplot(325)
-pl.imshow(np.swapaxes(np.rollaxis(featureMatrix[ind, :, :, :], 0, 3), 0, 1)/255.); pl.title('All')
+# pl.scatter(locs[:, 0], -locs[:,1], s=100, c=thetaFeats[ind, :].T); pl.title('Theta Electrodes')
+pl.subplot(221)
+pl.imshow(featureMatrix[ind, 0, :, :].T, cmap='Reds', vmin=np.min(featureMatrix[ind]), vmax=np.max(featureMatrix[ind])); pl.title('Theta')
+pl.subplot(222)
+pl.imshow(featureMatrix[ind, 1, :, :].T, cmap='Greens', vmin=np.min(featureMatrix[ind]), vmax=np.max(featureMatrix[ind])); pl.title('Alpha')
+pl.subplot(223)
+pl.imshow(featureMatrix[ind, 2, :, :].T, cmap='Blues', vmin=np.min(featureMatrix[ind]), vmax=np.max(featureMatrix[ind])); pl.title('Beta')
+pl.subplot(224)
+pl.imshow(np.swapaxes(np.rollaxis(featureMatrix[ind, :, :, :], 0, 3), 0, 1), vmin=np.min(featureMatrix[ind]), vmax=np.max(featureMatrix[ind])); pl.title('All')
 pl.show()

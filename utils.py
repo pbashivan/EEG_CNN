@@ -72,7 +72,7 @@ def load_data(data_file):
 
     print("Data loading complete. Shape is %r" % (dataMat['featMat'].shape,))
     # return data[indices, :, :, :].astype(np.uint8), labels[:, indices].T - 1        # Shuffled indices
-    return dataMat['featMat'].astype(np.uint8), dataMat['labels'].T - 1   # Sequential indices
+    return dataMat['featMat'], dataMat['labels'].T - 1   # Sequential indices
 
 
 def reformatInput(data, labels, indices):
@@ -87,10 +87,14 @@ def reformatInput(data, labels, indices):
     # Shuffling training data
     # shuffledIndices = np.random.permutation(len(trainIndices))
     # trainIndices = trainIndices[shuffledIndices]
-
-    return [(data[trainIndices, :, :, :], np.squeeze(labels[trainIndices]).astype(np.int32)),
-            (data[validIndices, :, :, :], np.squeeze(labels[validIndices]).astype(np.int32)),
-            (data[testIndices, :, :, :], np.squeeze(labels[testIndices]).astype(np.int32))]
+    if data.ndim == 4:
+        return [(data[trainIndices], np.squeeze(labels[trainIndices]).astype(np.int32)),
+                (data[validIndices], np.squeeze(labels[validIndices]).astype(np.int32)),
+                (data[testIndices], np.squeeze(labels[testIndices]).astype(np.int32))]
+    elif data.ndim == 5:
+        return [(data[:, trainIndices], np.squeeze(labels[trainIndices]).astype(np.int32)),
+                (data[:, validIndices], np.squeeze(labels[validIndices]).astype(np.int32)),
+                (data[:, testIndices], np.squeeze(labels[testIndices]).astype(np.int32))]
 
 if __name__ == '__main__':
     data = np.random.normal(size=(100, 10))

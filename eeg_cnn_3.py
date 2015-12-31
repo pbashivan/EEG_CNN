@@ -14,6 +14,7 @@ from keras.layers.convolutional import Convolution2D, MaxPooling2D
 from keras.optimizers import SGD, Adadelta, Adagrad
 from keras.utils import np_utils, generic_utils
 from keras.layers.normalization import BatchNormalization
+from utils import load_data, reformatInput
 # from six.moves import range
 
 
@@ -66,9 +67,10 @@ def main():
     for i in np.unique(subjNumbers):
         ts = subjNumbers == i
         tr = np.squeeze(np.nonzero(np.bitwise_not(ts)))
-        np.random.shuffle(ts)       # Shuffle indices
-        np.random.shuffle(tr)
-        fold_pairs.append((tr, np.squeeze(np.nonzero(ts))))
+        ts = np.squeeze(np.nonzero(ts))
+        np.random.shuffle(tr)       # Shuffle indices
+        np.random.shuffle(ts)
+        fold_pairs.append((tr, ts))
 
 
     validScores, testScores = [], []

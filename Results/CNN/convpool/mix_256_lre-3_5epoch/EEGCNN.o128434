@@ -1,0 +1,504 @@
+Model type is : mix
+Loading data...
+Loading data from EEG_images_32_timeWin
+Data loading complete. Shape is (7, 2670, 3, 32, 32)
+Beginning fold 1 out of 13
+Building model and compiling functions...
+Starting training...
+Epoch 1 of 5 took 51.132s
+  training loss:		1.197349
+  validation loss:		0.929048
+  validation accuracy:		67.22 %
+Final results:
+  test loss:			1.010407
+  test accuracy:		51.11 %
+Epoch 2 of 5 took 51.108s
+  training loss:		0.740505
+  validation loss:		0.408921
+  validation accuracy:		88.89 %
+Final results:
+  test loss:			1.108814
+  test accuracy:		48.33 %
+Epoch 3 of 5 took 51.077s
+  training loss:		0.347521
+  validation loss:		0.274523
+  validation accuracy:		88.89 %
+Final results:
+  test loss:			1.451530
+  test accuracy:		74.44 %
+Epoch 4 of 5 took 50.803s
+  training loss:		0.210913
+  validation loss:		0.221472
+  validation accuracy:		87.78 %
+Epoch 5 of 5 took 50.836s
+  training loss:		0.154450
+  validation loss:		0.109553
+  validation accuracy:		94.44 %
+Final results:
+  test loss:			1.999875
+  test accuracy:		62.78 %
+--------------------------------------------------
+Best validation accuracy:		94.44 %
+Best test accuracy:		62.78 %
+Beginning fold 2 out of 13
+Building model and compiling functions...
+Starting training...
+Epoch 1 of 5 took 49.300s
+  training loss:		1.134872
+  validation loss:		0.932542
+  validation accuracy:		60.50 %
+Final results:
+  test loss:			1.141285
+  test accuracy:		51.50 %
+Epoch 2 of 5 took 49.315s
+  training loss:		0.709304
+  validation loss:		0.287824
+  validation accuracy:		91.00 %
+Final results:
+  test loss:			0.724724
+  test accuracy:		70.00 %
+Epoch 3 of 5 took 49.311s
+  training loss:		0.316180
+  validation loss:		0.228080
+  validation accuracy:		93.50 %
+Final results:
+  test loss:			0.333696
+  test accuracy:		85.50 %
+Epoch 4 of 5 took 49.275s
+  training loss:		0.219988
+  validation loss:		0.210319
+  validation accuracy:		93.50 %
+Epoch 5 of 5 took 49.327s
+  training loss:		0.175783
+  validation loss:		0.189293
+  validation accuracy:		95.00 %
+Final results:
+  test loss:			0.416525
+  test accuracy:		70.00 %
+--------------------------------------------------
+Best validation accuracy:		95.00 %
+Best test accuracy:		70.00 %
+Beginning fold 3 out of 13
+Building model and compiling functions...
+Starting training...
+Epoch 1 of 5 took 50.299s
+  training loss:		1.130128
+  validation loss:		0.840861
+  validation accuracy:		69.44 %
+Final results:
+  test loss:			0.847157
+  test accuracy:		66.11 %
+Epoch 2 of 5 took 50.326s
+  training loss:		0.633223
+  validation loss:		0.410864
+  validation accuracy:		85.56 %
+Final results:
+  test loss:			0.572694
+  test accuracy:		78.33 %
+Epoch 3 of 5 took 50.317s
+  training loss:		0.322846
+  validation loss:		0.264818
+  validation accuracy:		90.56 %
+Final results:
+  test loss:			0.420852
+  test accuracy:		88.89 %
+Epoch 4 of 5 took 50.284s
+  training loss:		0.243573
+  validation loss:		0.203871
+  validation accuracy:		90.56 %
+Final results:
+  test loss:			0.519346
+  test accuracy:		91.67 %
+Epoch 5 of 5 took 50.278s
+  training loss:		0.209161
+  validation loss:		0.176275
+  validation accuracy:		90.56 %
+--------------------------------------------------
+Best validation accuracy:		90.56 %
+Best test accuracy:		91.67 %
+Beginning fold 4 out of 13
+Building model and compiling functions...
+Starting training...
+Epoch 1 of 5 took 50.170s
+  training loss:		1.151509
+  validation loss:		0.925181
+  validation accuracy:		66.00 %
+Final results:
+  test loss:			0.818379
+  test accuracy:		78.00 %
+Epoch 2 of 5 took 50.155s
+  training loss:		0.691942
+  validation loss:		0.332371
+  validation accuracy:		83.50 %
+Final results:
+  test loss:			0.135484
+  test accuracy:		98.50 %
+Epoch 3 of 5 took 50.137s
+  training loss:		0.377918
+  validation loss:		0.281086
+  validation accuracy:		87.50 %
+Final results:
+  test loss:			0.096785
+  test accuracy:		98.00 %
+Epoch 4 of 5 took 50.133s
+  training loss:		0.264052
+  validation loss:		0.232349
+  validation accuracy:		89.00 %
+Final results:
+  test loss:			0.019009
+  test accuracy:		99.50 %
+Epoch 5 of 5 took 50.197s
+  training loss:		0.211878
+  validation loss:		0.193825
+  validation accuracy:		89.50 %
+Final results:
+  test loss:			0.015250
+  test accuracy:		99.50 %
+--------------------------------------------------
+Best validation accuracy:		89.50 %
+Best test accuracy:		99.50 %
+Beginning fold 5 out of 13
+Building model and compiling functions...
+Starting training...
+Epoch 1 of 5 took 50.194s
+  training loss:		1.204229
+  validation loss:		1.075272
+  validation accuracy:		55.56 %
+Final results:
+  test loss:			1.054760
+  test accuracy:		62.22 %
+Epoch 2 of 5 took 50.174s
+  training loss:		0.936834
+  validation loss:		0.641547
+  validation accuracy:		75.56 %
+Final results:
+  test loss:			0.319572
+  test accuracy:		95.00 %
+Epoch 3 of 5 took 50.242s
+  training loss:		0.497019
+  validation loss:		0.366586
+  validation accuracy:		85.56 %
+Final results:
+  test loss:			0.081619
+  test accuracy:		97.78 %
+Epoch 4 of 5 took 50.192s
+  training loss:		0.325039
+  validation loss:		0.314218
+  validation accuracy:		86.67 %
+Final results:
+  test loss:			0.052246
+  test accuracy:		99.44 %
+Epoch 5 of 5 took 50.188s
+  training loss:		0.228107
+  validation loss:		0.247808
+  validation accuracy:		89.44 %
+Final results:
+  test loss:			0.014271
+  test accuracy:		99.44 %
+--------------------------------------------------
+Best validation accuracy:		89.44 %
+Best test accuracy:		99.44 %
+Beginning fold 6 out of 13
+Building model and compiling functions...
+Starting training...
+Epoch 1 of 5 took 50.295s
+  training loss:		1.114798
+  validation loss:		0.914251
+  validation accuracy:		66.50 %
+Final results:
+  test loss:			0.908121
+  test accuracy:		72.00 %
+Epoch 2 of 5 took 50.308s
+  training loss:		0.652554
+  validation loss:		0.345147
+  validation accuracy:		87.00 %
+Final results:
+  test loss:			0.189050
+  test accuracy:		96.50 %
+Epoch 3 of 5 took 50.340s
+  training loss:		0.365838
+  validation loss:		0.293972
+  validation accuracy:		86.50 %
+Epoch 4 of 5 took 50.312s
+  training loss:		0.244609
+  validation loss:		0.235218
+  validation accuracy:		90.00 %
+Final results:
+  test loss:			0.099921
+  test accuracy:		96.50 %
+Epoch 5 of 5 took 50.297s
+  training loss:		0.212513
+  validation loss:		0.189696
+  validation accuracy:		90.00 %
+--------------------------------------------------
+Best validation accuracy:		90.00 %
+Best test accuracy:		96.50 %
+Beginning fold 7 out of 13
+Building model and compiling functions...
+Starting training...
+Epoch 1 of 5 took 50.685s
+  training loss:		1.197729
+  validation loss:		1.022216
+  validation accuracy:		57.22 %
+Final results:
+  test loss:			0.899521
+  test accuracy:		58.33 %
+Epoch 2 of 5 took 50.681s
+  training loss:		0.855146
+  validation loss:		0.611023
+  validation accuracy:		77.78 %
+Final results:
+  test loss:			0.404169
+  test accuracy:		86.11 %
+Epoch 3 of 5 took 50.684s
+  training loss:		0.486022
+  validation loss:		0.452926
+  validation accuracy:		82.22 %
+Final results:
+  test loss:			0.099437
+  test accuracy:		97.22 %
+Epoch 4 of 5 took 50.654s
+  training loss:		0.296246
+  validation loss:		0.246330
+  validation accuracy:		89.44 %
+Final results:
+  test loss:			0.030599
+  test accuracy:		98.89 %
+Epoch 5 of 5 took 50.694s
+  training loss:		0.208291
+  validation loss:		0.241421
+  validation accuracy:		89.44 %
+Final results:
+  test loss:			0.037084
+  test accuracy:		99.44 %
+--------------------------------------------------
+Best validation accuracy:		89.44 %
+Best test accuracy:		99.44 %
+Beginning fold 8 out of 13
+Building model and compiling functions...
+Starting training...
+Epoch 1 of 5 took 50.175s
+  training loss:		1.149225
+  validation loss:		0.794919
+  validation accuracy:		68.00 %
+Final results:
+  test loss:			0.682956
+  test accuracy:		79.00 %
+Epoch 2 of 5 took 50.155s
+  training loss:		0.712552
+  validation loss:		0.351437
+  validation accuracy:		86.50 %
+Final results:
+  test loss:			0.242074
+  test accuracy:		95.00 %
+Epoch 3 of 5 took 50.164s
+  training loss:		0.452546
+  validation loss:		0.211375
+  validation accuracy:		91.50 %
+Final results:
+  test loss:			0.106201
+  test accuracy:		97.00 %
+Epoch 4 of 5 took 50.165s
+  training loss:		0.293808
+  validation loss:		0.177993
+  validation accuracy:		90.50 %
+Epoch 5 of 5 took 50.157s
+  training loss:		0.246147
+  validation loss:		0.168279
+  validation accuracy:		92.00 %
+Final results:
+  test loss:			0.026010
+  test accuracy:		99.50 %
+--------------------------------------------------
+Best validation accuracy:		92.00 %
+Best test accuracy:		99.50 %
+Beginning fold 9 out of 13
+Building model and compiling functions...
+Starting training...
+Epoch 1 of 5 took 49.198s
+  training loss:		1.229921
+  validation loss:		1.055001
+  validation accuracy:		54.00 %
+Final results:
+  test loss:			0.951754
+  test accuracy:		59.50 %
+Epoch 2 of 5 took 49.203s
+  training loss:		0.846694
+  validation loss:		0.676031
+  validation accuracy:		71.00 %
+Final results:
+  test loss:			0.403353
+  test accuracy:		86.50 %
+Epoch 3 of 5 took 49.168s
+  training loss:		0.447528
+  validation loss:		0.406310
+  validation accuracy:		86.00 %
+Final results:
+  test loss:			0.105094
+  test accuracy:		97.00 %
+Epoch 4 of 5 took 49.205s
+  training loss:		0.297814
+  validation loss:		0.342008
+  validation accuracy:		88.50 %
+Final results:
+  test loss:			0.086593
+  test accuracy:		98.50 %
+Epoch 5 of 5 took 49.186s
+  training loss:		0.258918
+  validation loss:		0.342611
+  validation accuracy:		88.00 %
+--------------------------------------------------
+Best validation accuracy:		88.50 %
+Best test accuracy:		98.50 %
+Beginning fold 10 out of 13
+Building model and compiling functions...
+Starting training...
+Epoch 1 of 5 took 49.494s
+  training loss:		1.174557
+  validation loss:		0.932858
+  validation accuracy:		59.09 %
+Final results:
+  test loss:			0.872808
+  test accuracy:		64.55 %
+Epoch 2 of 5 took 49.491s
+  training loss:		0.722088
+  validation loss:		0.411203
+  validation accuracy:		84.09 %
+Final results:
+  test loss:			0.369201
+  test accuracy:		87.73 %
+Epoch 3 of 5 took 49.511s
+  training loss:		0.353372
+  validation loss:		0.255468
+  validation accuracy:		90.00 %
+Final results:
+  test loss:			0.172653
+  test accuracy:		94.09 %
+Epoch 4 of 5 took 49.474s
+  training loss:		0.256595
+  validation loss:		0.195899
+  validation accuracy:		91.82 %
+Final results:
+  test loss:			0.137384
+  test accuracy:		95.00 %
+Epoch 5 of 5 took 49.506s
+  training loss:		0.198533
+  validation loss:		0.268810
+  validation accuracy:		91.82 %
+--------------------------------------------------
+Best validation accuracy:		91.82 %
+Best test accuracy:		95.00 %
+Beginning fold 11 out of 13
+Building model and compiling functions...
+Starting training...
+Epoch 1 of 5 took 49.482s
+  training loss:		1.200959
+  validation loss:		0.883386
+  validation accuracy:		66.50 %
+Final results:
+  test loss:			1.053380
+  test accuracy:		57.00 %
+Epoch 2 of 5 took 49.440s
+  training loss:		0.810124
+  validation loss:		0.538433
+  validation accuracy:		78.50 %
+Final results:
+  test loss:			1.233217
+  test accuracy:		49.50 %
+Epoch 3 of 5 took 49.474s
+  training loss:		0.452004
+  validation loss:		0.262831
+  validation accuracy:		88.50 %
+Final results:
+  test loss:			0.478398
+  test accuracy:		87.00 %
+Epoch 4 of 5 took 49.436s
+  training loss:		0.260155
+  validation loss:		0.190739
+  validation accuracy:		92.50 %
+Final results:
+  test loss:			0.185166
+  test accuracy:		95.00 %
+Epoch 5 of 5 took 49.443s
+  training loss:		0.215786
+  validation loss:		0.180061
+  validation accuracy:		91.50 %
+--------------------------------------------------
+Best validation accuracy:		92.50 %
+Best test accuracy:		95.00 %
+Beginning fold 12 out of 13
+Building model and compiling functions...
+Starting training...
+Epoch 1 of 5 took 49.900s
+  training loss:		1.164587
+  validation loss:		0.978598
+  validation accuracy:		54.50 %
+Final results:
+  test loss:			1.076753
+  test accuracy:		50.50 %
+Epoch 2 of 5 took 49.912s
+  training loss:		0.771857
+  validation loss:		0.453388
+  validation accuracy:		81.50 %
+Final results:
+  test loss:			0.814007
+  test accuracy:		72.00 %
+Epoch 3 of 5 took 49.910s
+  training loss:		0.417624
+  validation loss:		0.199823
+  validation accuracy:		90.50 %
+Final results:
+  test loss:			0.421979
+  test accuracy:		79.50 %
+Epoch 4 of 5 took 49.919s
+  training loss:		0.261162
+  validation loss:		0.155571
+  validation accuracy:		92.50 %
+Final results:
+  test loss:			0.292785
+  test accuracy:		91.50 %
+Epoch 5 of 5 took 49.930s
+  training loss:		0.202009
+  validation loss:		0.200412
+  validation accuracy:		90.50 %
+--------------------------------------------------
+Best validation accuracy:		92.50 %
+Best test accuracy:		91.50 %
+Beginning fold 13 out of 13
+Building model and compiling functions...
+Starting training...
+Epoch 1 of 5 took 49.351s
+  training loss:		1.109974
+  validation loss:		0.848743
+  validation accuracy:		70.91 %
+Final results:
+  test loss:			1.680720
+  test accuracy:		35.91 %
+Epoch 2 of 5 took 49.374s
+  training loss:		0.651552
+  validation loss:		0.459712
+  validation accuracy:		82.73 %
+Final results:
+  test loss:			1.704249
+  test accuracy:		35.00 %
+Epoch 3 of 5 took 49.371s
+  training loss:		0.334844
+  validation loss:		0.218750
+  validation accuracy:		94.09 %
+Final results:
+  test loss:			1.275109
+  test accuracy:		48.18 %
+Epoch 4 of 5 took 49.356s
+  training loss:		0.190846
+  validation loss:		0.171974
+  validation accuracy:		95.45 %
+Final results:
+  test loss:			0.998833
+  test accuracy:		53.18 %
+Epoch 5 of 5 took 49.364s
+  training loss:		0.170663
+  validation loss:		0.202522
+  validation accuracy:		93.64 %
+--------------------------------------------------
+Best validation accuracy:		95.45 %
+Best test accuracy:		53.18 %

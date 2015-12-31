@@ -31,13 +31,13 @@ from lasagne.nonlinearities import softmax
 
 from utils import load_data, reformatInput
 
-augment = True      # Augment data
-filename = 'EEG_images'
-filename_aug = 'EEG_images_aug'
+augment = False      # Augment data
+filename = 'EEG_images_32'
+filename_aug = 'EEG_images_32_aug'
 subjectsFilename = 'trials_subNums'
 model = 'cnn'
-num_epochs = 300
-
+num_epochs = 25
+imSize = 32
 batch_size = 20
 nb_classes = 4
 
@@ -52,33 +52,36 @@ def build_cnn(input_var=None):
     # and a fully-connected hidden layer in front of the output layer.
 
     # Input layer, as usual:
-    network = lasagne.layers.InputLayer(shape=(None, 3, 40, 40),
+    network = lasagne.layers.InputLayer(shape=(None, 3, imSize, imSize),
                                         input_var=input_var)
     # This time we do not apply input dropout, as it tends to work less well
     # for convolutional layers.
 
-    # Convolutional layer with 32 kernels of size 5x5. Strided and padded
-    # convolutions are supported as well; see the docstring.
+    # CNN Group 1
     network = lasagne.layers.Conv2DLayer(
-            network, num_filters=64, filter_size=(3, 3),
-            W=lasagne.init.GlorotUniform())
+            network, num_filters=32, filter_size=(3, 3),
+            W=lasagne.init.GlorotUniform(), pad='same')
     network = lasagne.layers.Conv2DLayer(
-            network, num_filters=64, filter_size=(3, 3),
-            W=lasagne.init.GlorotUniform())
-    # network = lasagne.layers.Conv2DLayer(
-    #         network, num_filters=40, filter_size=(3, 3),
-    #         W=lasagne.init.GlorotUniform())
+            network, num_filters=32, filter_size=(3, 3),
+            W=lasagne.init.GlorotUniform(), pad='same')
+    network = lasagne.layers.Conv2DLayer(
+            network, num_filters=32, filter_size=(3, 3),
+            W=lasagne.init.GlorotUniform(), pad='same')
+    network = lasagne.layers.Conv2DLayer(
+            network, num_filters=32, filter_size=(3, 3),
+            W=lasagne.init.GlorotUniform(), pad='same')
     network = lasagne.layers.MaxPool2DLayer(network, pool_size=(2, 2))
-    # Expert note: Lasagne provides alternative convolutional layers that
-    # override Theano's choice of which implementation to use; for details
-    # please see http://lasagne.readthedocs.org/en/latest/user/tutorial.html.
 
+    # CNN Group 2
     network = lasagne.layers.Conv2DLayer(
-            network, num_filters=128, filter_size=(3, 3))
+            network, num_filters=64, filter_size=(3, 3), pad='same')
     network = lasagne.layers.Conv2DLayer(
-            network, num_filters=128, filter_size=(3, 3))
-    # network = lasagne.layers.Conv2DLayer(
-    #         network, num_filters=80, filter_size=(3, 3))
+            network, num_filters=64, filter_size=(3, 3), pad='same')
+    network = lasagne.layers.MaxPool2DLayer(network, pool_size=(2, 2))
+
+    # CNN Group 3
+    network = lasagne.layers.Conv2DLayer(
+            network, num_filters=128, filter_size=(3, 3), pad='same')
     network = lasagne.layers.MaxPool2DLayer(network, pool_size=(2, 2))
 
     # A fully-connected layer of 256 units with 50% dropout on its inputs:
@@ -94,23 +97,6 @@ def build_cnn(input_var=None):
             nonlinearity=lasagne.nonlinearities.softmax)
 
     return network
-
-def build_cnn2(input_var=None):
-    net = {}
-    net['input'] = InputLayer((None, 3, 40, 40), input_var=input_var)
-    net['conv1_1'] = ConvLayer(net['input'], 40, 3, pad='full', nonlinearity=lasagne.nonlinearities.rectify)
-    # net['conv1_2'] = ConvLayer(net['conv1_1'], 40, 3, pad='full', nonlinearity=lasagne.nonlinearities.rectify)
-    net['pool1'] = PoolLayer(net['conv1_1'], 2)
-    net['drop1'] = DropoutLayer(net['pool1'], p=0.25)
-    net['conv2_1'] = ConvLayer(net['drop1'], 80, 3, pad='full', nonlinearity=lasagne.nonlinearities.rectify)
-    # net['conv2_2'] = ConvLayer(net['conv2_1'], 80, 3, pad='full', nonlinearity=lasagne.nonlinearities.rectify)
-    net['pool2'] = PoolLayer(net['conv2_1'], 2)
-    net['drop2'] = DropoutLayer(net['pool2'], p=0.25)
-    net['fc1'] = DenseLayer(net['drop2'], num_units=512, nonlinearity=lasagne.nonlinearities.rectify)
-    net['drop3'] = DropoutLayer(net['fc1'], p=0.5)
-    net['fc2'] = DenseLayer(net['drop3'], num_units=nb_classes, nonlinearity=softmax)
-
-    return net['fc2']
 
 
 # ############################# Batch iterator ###############################
@@ -146,22 +132,37 @@ def main():
     mat = scipy.io.loadmat(subjectsFilename, mat_dtype=True)
     subjNumbers = np.squeeze(mat['subjectNum'])     # subject IDs for each trial
 
+    fold_pairs = []
     if augment:
+        # Aggregate augmented data and labels
         data_aug, labels_aug = load_data(filename_aug)
         data = np.vstack((data, data_aug))
         labels = np.vstack((labels, labels_aug))
-        subjNumbers = np.concatenate((subjNumbers, subjNumbers))
-
-    # Leave-Subject-Out cross validation
-    fold_pairs = []
-    for i in np.unique(subjNumbers):
-        ts = subjNumbers == i
-        tr = np.squeeze(np.nonzero(np.bitwise_not(ts)))
-        np.random.shuffle(ts)       # Shuffle indices
-        np.random.shuffle(tr)
-        fold_pairs.append((tr, np.squeeze(np.nonzero(ts))))
+        # Leave-Subject-Out cross validation
+        for i in np.unique(subjNumbers):
+            ts = subjNumbers == i
+            tr = np.squeeze(np.nonzero(np.bitwise_not(ts)))         # Training indices
+            ts = np.squeeze(np.nonzero(ts))
+            # Include augmented training data
+            tr = np.concatenate((tr, tr+subjNumbers.size))
+            np.random.shuffle(tr)       # Shuffle indices
+            np.random.shuffle(ts)
+            fold_pairs.append((tr, ts))
+    else:
+        # Leave-Subject-Out cross validation
+        for i in np.unique(subjNumbers):
+            ts = subjNumbers == i
+            tr = np.squeeze(np.nonzero(np.bitwise_not(ts)))
+            ts = np.squeeze(np.nonzero(ts))
+            np.random.shuffle(tr)       # Shuffle indices
+            np.random.shuffle(ts)
+            fold_pairs.append((tr, ts))
 
     validScores, testScores = [], []
+    trainLoss = np.zeros((len(fold_pairs), num_epochs))
+    validLoss = np.zeros((len(fold_pairs), num_epochs))
+    validEpochAccu = np.zeros((len(fold_pairs), num_epochs))
+
     for foldNum, fold in enumerate(fold_pairs):
         print('Beginning fold {0} out of {1}'.format(foldNum+1, len(fold_pairs)))
         (X_train, y_train), (X_val, y_val), (X_test, y_test) = reformatInput(data, labels, fold)
@@ -169,15 +170,22 @@ def main():
         X_val = X_val.astype("float32", casting='unsafe')
         X_test = X_test.astype("float32", casting='unsafe')
         # Normalizing the input
+        # trainMeans = [np.mean(X_train[:, i, :, :].flatten()) for i in range(X_train.shape[1])]
+        # trainStds = [np.std(X_train[:, i, :, :].flatten()) for i in range(X_train.shape[1])]
+        # for i in range(len(trainMeans)):
+        #     X_train[:, i, :, :] = (X_train[:, i, :, :] - trainMeans[i]) / trainStds[i]
+        #     X_val[:, i, :, :] = (X_val[:, i, :, :] - trainMeans[i]) / trainStds[i]
+        #     X_test[:, i, :, :] = (X_test[:, i, :, :] - trainMeans[i]) / trainStds[i]
+
         # X_train = (X_train - np.mean(X_train, axis=0)) / np.std(X_train.flatten(), axis=0)
-        # X_val = (X_val - np.mean(X_val, axis=0)) / np.std(X_val.flatten(), axis=0)
-        # X_test = (X_test - np.mean(X_test, axis=0)) / np.std(X_test.flatten(), axis=0)
+        # X_val = (X_val - np.mean(X_train, axis=0)) / np.std(X_train.flatten(), axis=0)
+        # X_test = (X_test - np.mean(X_train, axis=0)) / np.std(X_train.flatten(), axis=0)
         # X_train = (X_train - np.mean(X_train, axis=0)) / np.float32(256)
         # X_val = (X_val - np.mean(X_train, axis=0)) / np.float32(256)
         # X_test = (X_test - np.mean(X_train, axis=0)) / np.float32(256)
-        X_train = X_train / np.float32(256)
-        X_val = X_val / np.float32(256)
-        X_test = X_test / np.float32(256)
+        # X_train = X_train / np.float32(256)
+        # X_val = X_val / np.float32(256)
+        # X_test = X_test / np.float32(256)
 
         # Prepare Theano variables for inputs and targets
         input_var = T.tensor4('inputs')
@@ -198,9 +206,9 @@ def main():
         # parameters at each training step. Here, we'll use Stochastic Gradient
         # Descent (SGD) with Nesterov momentum, but Lasagne offers plenty more.
         params = lasagne.layers.get_all_params(network, trainable=True)
-        updates = lasagne.updates.nesterov_momentum(
-                loss, params, learning_rate=0.001, momentum=0.9)
-
+        # updates = lasagne.updates.nesterov_momentum(
+        #         loss, params, learning_rate=0.001, momentum=0.9)
+        updates = lasagne.updates.adam(loss, params, learning_rate=0.001)
         # Create a loss expression for validation/testing. The crucial difference
         # here is that we do a deterministic forward pass through the network,
         # disabling dropout layers.
@@ -252,6 +260,11 @@ def main():
             print("  training loss:\t\t{:.6f}".format(av_train_err))
             print("  validation loss:\t\t{:.6f}".format(av_val_err))
             print("  validation accuracy:\t\t{:.2f} %".format(av_val_acc * 100))
+
+            trainLoss[foldNum, epoch] = av_train_err
+            validLoss[foldNum, epoch] = av_val_err
+            validEpochAccu[foldNum, epoch] = av_val_acc * 100
+
             if av_val_acc > best_validation_accu:
                 best_validation_accu = av_val_acc
 
@@ -272,13 +285,19 @@ def main():
                 print("  test loss:\t\t\t{:.6f}".format(av_test_err))
                 print("  test accuracy:\t\t{:.2f} %".format(av_test_acc * 100))
                 # Dump the network weights to a file like this:
-                np.savez('weigths_lasg{0}'.format(foldNum), *lasagne.layers.get_all_param_values(network))
+                np.savez('weights_lasg{0}'.format(foldNum), *lasagne.layers.get_all_param_values(network))
         validScores.append(best_validation_accu * 100)
         testScores.append(av_test_acc * 100)
         print('-'*50)
         print("Best validation accuracy:\t\t{:.2f} %".format(best_validation_accu * 100))
         print("Best test accuracy:\t\t{:.2f} %".format(av_test_acc * 100))
-    scipy.io.savemat('cnn_lasg_results', {'validAccu': validScores, 'testAccu': testScores})
+    scipy.io.savemat('cnn_lasg_results_G',
+                     {'validAccu': validScores,
+                      'testAccu': testScores,
+                      'trainLoss': trainLoss,
+                      'validLoss': validLoss,
+                      'validEpochAccu': validEpochAccu
+                      })
         #
         # And load them again later on like this:
         # with np.load('model.npz') as f:
