@@ -1,0 +1,2 @@
+cnn_lasg_results_orig: 7-layer convnet trained with polar (azimuthal projection) EEG images
+cnn_lasg_results_flattened: 7-layer convnet trained with flattened EEG images
